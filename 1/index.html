@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+<body>
+    <div class="flex justify-evenly bg-blue-400 text-white h-10 items-center">
+        <div>
+            <a class="nav-links" href="">Home</a>
+        </div>
+        <div>
+            <a class="nav-links" href="">About</a>
+        </div>
+        <div>
+            <a class="nav-links" href="">Contact</a>
+        </div>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png" alt=""
+            width="40px" height="40px" class="md:hidden" id="btn">
+        </div>
+    </div>
+    <script>
+        const btn=document.getElementById('btn');
+        const menu=document.getElementsByClassName('nav-links');
+        console.log(menu);
+        btn.addEventListner('click',()=>{
+            menu.classList.toggle('hidden');
+        })
+    </script>
+</body>
+</html>
